@@ -11,6 +11,8 @@ import { ActorAltaComponent } from './componentes/actor-alta/actor-alta.componen
 import { ActorListadoComponent } from './componentes/actor-listado/actor-listado.component';
 import { PeliculaListadoComponent } from './componentes/pelicula-listado/pelicula-listado.component';
 import { TablaPeliculasComponent } from './componentes/tabla-peliculas/tabla-peliculas.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { TablaPeliculasComponent } from './componentes/tabla-peliculas/tabla-pel
     BrowserModule,
     RouterModule,
     NoopAnimationsModule,
-    RutasRoutingModule
+    RutasRoutingModule,
+    MatCardModule, 
+    MatTableModule
   ],
   exports:[RouterModule],
   providers: [],
