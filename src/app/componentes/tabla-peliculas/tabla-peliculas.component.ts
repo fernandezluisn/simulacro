@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {Pelicula} from '../../clases/pelicula';
+import { LocalstorageService } from 'src/app/servicio/localstorage.service';
 
 @Component({
   selector: 'app-tabla-peliculas',
@@ -21,5 +22,12 @@ export class TablaPeliculasComponent implements OnInit {
   {
     console.info("a ver si anda ",pelicula);
     this.peliculaSeleccionada.emit(pelicula);
+  }
+
+  eliminarFila(prod: Pelicula){ 
+    let ls=new LocalstorageService();
+    var i=this.listadoPeliculas.indexOf(prod);
+    this.listadoPeliculas.splice(i, 1);
+    ls.eliminarPelicula(prod);
   }
 }

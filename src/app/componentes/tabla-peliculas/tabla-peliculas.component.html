@@ -16,6 +16,7 @@
             <td>{{pelicula.fechaDeEstreno}}</td>
             <td>{{pelicula.cantidadPublico}}</td>
             <td><mat-card><img mat-card-m-image src="{{pelicula.foto}}" alt="" (click)="mostrarDetalles(pelicula)"></mat-card></td>
+            <td><button mat-raised-button color="warn" (click)="eliminarFila(pelicula)">Eliminar</button></td>
             
         </tr>
     </tbody>

@@ -14,6 +14,7 @@ import { TablaPeliculasComponent } from './componentes/tabla-peliculas/tabla-pel
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import { DetallePeliculaComponent } from './componentes/detalle-pelicula/detalle-pelicula.component';
+import { LocalstorageService } from './servicio/localstorage.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { DetallePeliculaComponent } from './componentes/detalle-pelicula/detalle
     MatTableModule
   ],
   exports:[RouterModule],
-  providers: [],
+  providers: [LocalstorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

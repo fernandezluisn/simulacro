@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Pelicula } from 'src/app/clases/pelicula';
+import { LocalstorageService } from 'src/app/servicio/localstorage.service';
 
 
 @Component({
@@ -20,9 +21,14 @@ export class PeliculaListadoComponent implements OnInit {
     this.titanic=new Pelicula(2, "Titanic", "romantica",  "11-11-1993",  300, '../assets/tit.jpg');
     this.zoolander=new Pelicula(3, "Zoolander", "comedia",  "11-11-1995",  100, '../assets/zoo.jpg');
     this.peliculas=new Array();
+
+    let ls=new LocalstorageService();
     this.peliculas.push(this.reyLeon);
     this.peliculas.push(this.titanic);
     this.peliculas.push(this.zoolander);
+    this.peliculas.forEach(element => {
+      ls.guardarPelicula(element);
+    });
   }
   ngOnInit(): void {
   }
@@ -30,4 +36,6 @@ export class PeliculaListadoComponent implements OnInit {
   {
   this.peliculaSeleccionada=NuevoAlumno;   
   }
+
+  
 }
