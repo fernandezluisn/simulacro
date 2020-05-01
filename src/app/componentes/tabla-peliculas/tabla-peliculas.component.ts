@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {Pelicula} from '../../clases/pelicula';
 
 @Component({
@@ -9,7 +9,7 @@ import {Pelicula} from '../../clases/pelicula';
 export class TablaPeliculasComponent implements OnInit {
 
   @Input() listadoPeliculas: Pelicula[] ;
-  
+  @Output() peliculaSeleccionada: EventEmitter<any>= new EventEmitter<any>();
   
   constructor() { 
  
@@ -17,5 +17,9 @@ export class TablaPeliculasComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  mostrarDetalles(pelicula:Pelicula)
+  {
+    console.info("a ver si anda ",pelicula);
+    this.peliculaSeleccionada.emit(pelicula);
+  }
 }

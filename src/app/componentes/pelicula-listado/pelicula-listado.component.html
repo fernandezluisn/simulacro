@@ -1,1 +1,2 @@
-<app-tabla-peliculas [listadoPeliculas]="peliculas"></app-tabla-peliculas>
+<app-tabla-peliculas [listadoPeliculas]="peliculas" (peliculaSeleccionada)="tomarPeliculaParaDetalles($event)"></app-tabla-peliculas>
+<app-detalle-pelicula [pelicula]="peliculaSeleccionada"  ></app-detalle-pelicula>

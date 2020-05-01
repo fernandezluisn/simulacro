@@ -15,7 +15,7 @@
             <td>{{pelicula.tipo}}</td>
             <td>{{pelicula.fechaDeEstreno}}</td>
             <td>{{pelicula.cantidadPublico}}</td>
-            <td><mat-card><img mat-card-m-image src="{{pelicula.foto}}" alt=""></mat-card></td>
+            <td><mat-card><img mat-card-m-image src="{{pelicula.foto}}" alt="" (click)="mostrarDetalles(pelicula)"></mat-card></td>
             
         </tr>
     </tbody>

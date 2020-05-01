@@ -13,6 +13,7 @@ import { PeliculaListadoComponent } from './componentes/pelicula-listado/pelicul
 import { TablaPeliculasComponent } from './componentes/tabla-peliculas/tabla-peliculas.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
+import { DetallePeliculaComponent } from './componentes/detalle-pelicula/detalle-pelicula.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {MatTableModule} from '@angular/material/table';
     ActorAltaComponent,
     ActorListadoComponent,
     PeliculaListadoComponent,
-    TablaPeliculasComponent
+    TablaPeliculasComponent,
+    DetallePeliculaComponent
   ],
   imports: [
     BrowserModule,
